@@ -18,7 +18,7 @@ class Styles_Scripts{
 
     public function frontendStyles()
     {
-
+        wp_enqueue_style('spb',SPB_PLUGIN_URL.'/resources/css/spb.css',array(),NULL,'all');
     }
 
     /**
@@ -29,7 +29,7 @@ class Styles_Scripts{
 
     public function BackendStyles()
     {
-
+        wp_enqueue_style('spb-admin',SPB_PLUGIN_URL.'/resources/css/admin/spb-admin.css',array(),NULL,'all');
     }
 
     /**
@@ -40,7 +40,7 @@ class Styles_Scripts{
 
     public function frontendScripts()
     {
-
+        wp_enqueue_script('spb',SPB_PLUGIN_URL.'/resources/js/spb.js',array('jquery'),NULL,true);
     }
 
     /**
@@ -51,6 +51,6 @@ class Styles_Scripts{
 
     public function BackendScripts()
     {
-
+        wp_enqueue_script('spb-admin',SPB_PLUGIN_URL.'/resources/js/admin/spb-admin.js',array('jquery'),NULL,true);
     }
 }

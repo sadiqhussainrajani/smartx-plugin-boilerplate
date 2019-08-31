@@ -8,6 +8,7 @@ use Smartx_Plugin_Boilerplate\Callbacks\Actions as Action_Callback;
 use Smartx_Plugin_Boilerplate\Callbacks\Filters as Filter_Callback;
 use Smartx_Plugin_Boilerplate\Callbacks\Ajax as Ajax_Callback;
 use Smartx_Plugin_Boilerplate\Callbacks\Shortcodes as Shortcode_Callback;
+use Smartx_Plugin_Boilerplate\Callbacks\Styles_Scripts as Styles_Scripts;
 
 /**
  * This class is used to add all dependencies like action hooks, filter hooks and shortcodes.
@@ -28,6 +29,7 @@ class Initialize
         $this->addAjaxActions();
         $this->addFilters();
         $this->addShortcodes();
+        $this->addStylesScripts();
     }
 
     /**
@@ -72,6 +74,22 @@ class Initialize
     {
         $class = new Shortcode_Callback();
         //$this->loader->addShortcode('shortcode',$class,'callbackFunction');
+    }
+
+    /**
+     * Add Styles and scripts in wordpress
+     * 
+     * @since 1.0
+     */
+    public function addStylesScripts()
+    {
+        $class = new Styles_Scripts();
+        
+        $this->loader->addAction('wp_enqueue_scripts',$class,'frontendStyles');
+        $this->loader->addAction('wp_enqueue_scripts',$class,'frontendScripts');
+
+        $this->loader->addAction('admin_enqueue_scripts',$class,'backendStyles');
+        $this->loader->addAction('admin_enqueue_scripts',$class,'backendScripts');
     }
 
     /**

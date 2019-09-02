@@ -1,7 +1,7 @@
 # Smartx Wordpress Plugin Boilerplate
 This is an OOP based WordPress plugin boilerplate with namespaces &amp; composer auto load classes
 
-### Constants
+## Constants
 **SPB_PLUGIN_PATH**     -> Used to get path of the plugin directory
 
 **SPB_PLUGIN_URL**      -> Used to get url of the plugin directory

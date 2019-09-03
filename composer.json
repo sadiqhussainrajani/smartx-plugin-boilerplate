@@ -2,7 +2,7 @@
     "name" : "smartx-plugin-boilerplate",
     "autoload": {
         "psr-4": {
-            "Smartx_Plugin_Boilerplate\\": "includes"
+            "Smartx_Plugin_Boilerplate\\": "includes/"
         }
     }
 }

@@ -8,11 +8,16 @@
  * a function that starts the plugin.
  * 
  * @wordpress-plugin
- * Plugin Name: Smartx Plugin Boilerplate
- * Version: 1.0
- * Author: Sadiq Hussain Rajani
- * License: GPL3
- * Description: This is a Boilerplate plugin to create OOP based plugin in Wordpress with namespaces and composer for autoload classes.
+ * Plugin Name:       Smartx Plugin Boilerplate
+ * Plugin URI:        https://github.com/sadiqhussainrajani/smartx-plugin-boilerplate
+ * Description:       This is a Boilerplate plugin to create OOP based plugin in Wordpress with namespaces and composer for autoload classes.
+ * Version:           1.0
+ * Author:            Sadiq Hussain Rajani
+ * Author URI:        https://github.com/sadiqhussainrajani/
+ * License:           GPL v3
+ * License URI:       https://www.gnu.org/licenses/gpl-3.0.en.html
+ * Text Domain:       smartx-plugin-boilerplate
+ * Domain Path:       /languages
  */
 
 use Smartx_Plugin_Boilerplate\Initialize as Init;

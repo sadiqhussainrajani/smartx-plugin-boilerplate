@@ -98,6 +98,8 @@ class Helper
         }
         $string .= '_';
 
+        $string = strtolower($string);
+
         if ($upper) {
             $string = strtoupper($string);
         }
